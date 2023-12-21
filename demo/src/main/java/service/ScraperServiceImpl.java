@@ -58,6 +58,8 @@ public abstract class ScraperServiceImpl implements ScraperService {
                     responseDTO.setUrl(ads.attr("href"));
                 }
                 
+                
+                
                 if () {
                 	
                 }
