@@ -20,24 +20,9 @@ public abstract class ScraperServiceImpl implements ScraperService {
     @Value("#{'${website.urls}'.split(',')}")
     List<String> urls;
 
-    public Set<ResponseDTO> getSellerName(String vehicleModel) {
-        // Using a set here to only store unique elements
-        Set<ResponseDTO> responseDTOS = new HashSet<>();
-        // Traversing through the urls
-        for (String url : urls) {
 
-            if (url.contains("afrikrea")) {
-                // method to extract data from Ikman.lk
-                extractDataFromIkman(responseDTOS, url + vehicleModel);
-       
-            }
 
-        }
-        return responseDTOS;
-        
-    }
-
-    public void extractDataFromRiyasewana(Set<ResponseDTO> responseDTOS, String url) {
+    public void extractDataFromAnka(Set<ResponseDTO> responseDTOS, String url) {
 
         try {
             // loading the HTML to a Document Object
@@ -80,6 +65,23 @@ public abstract class ScraperServiceImpl implements ScraperService {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+    }
+    
+    public Set<ResponseDTO> getSellerName(String vehicleModel) {
+        // Using a set here to only store unique elements
+        Set<ResponseDTO> responseDTOS = new HashSet<>();
+        // Traversing through the urls
+        for (String url : urls) {
+
+            if (url.contains("afrikrea")) {
+                // method to extract data from Ikman.lk
+                extractDataFromAnka(responseDTOS, url + vehicleModel);
+       
+            }
+
+        }
+        return responseDTOS;
+        
     }
 
 
