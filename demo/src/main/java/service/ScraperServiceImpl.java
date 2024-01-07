@@ -59,45 +59,29 @@ public abstract class ScraperServiceImpl implements ScraperService {
                 }
                 
                 
-                
-                if () {
-                	
+                Element priceElement = ads.selectFirst(".price-tag");
+                if (priceElement != null) {
+                    responseDTO.setPrice(priceElement.text().trim());
+                }
+
+                Element nameElement = ads.selectFirst(".name");
+                if (nameElement != null) {
+                    responseDTO.setName(nameElement.text().trim());
                 }
                 
                 if (responseDTO.getUrl() != null)
                     responseDTOS.add(responseDTO);
+                
+                }
+                
+               
             }
-         }
+         
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
 
-    public void extractDataFromIkman(Set<ResponseDTO> responseDTOS, String url) {
-        try {
-            // loading the HTML to a Document Object
-            Document document = Jsoup.connect(url).get();
-            // Selecting the element which contains the ad list
-            Element element = document.getElementsByClass("list--3NxGO").first();
-            // getting all the <a> tag elements inside the list- -3NxGO class
-            Elements elements = element.getElementsByTag("a");
 
-            for (Element ads : elements) {
-
-                ResponseDTO responseDTO = new ResponseDTO();
-
-                if (StringUtils.isNotEmpty(ads.attr("href"))) {
-                    // mapping data to our model class
-                    responseDTO.setTitle(ads.attr("title"));
-                    responseDTO.setUrl("https://ikman.lk" + ads.attr("href"));
-                }
-                if (responseDTO.getUrl() != null)
-                    responseDTOS.add(responseDTO);
-
-            }
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
 
 }
