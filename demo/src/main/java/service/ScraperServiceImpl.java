@@ -1,6 +1,9 @@
 package service;
 
-import com.example.demo.model.ResponseDTO;
+import java.io.IOException;
+import java.util.List;
+import java.util.Set;
+
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -9,16 +12,18 @@ import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import com.example.demo.model.ResponseDTO;
 
 @Service
 public abstract class ScraperServiceImpl implements ScraperService {
     // Reading data from property file to a list
     @Value("#{'${website.urls}'.split(',')}")
-    List<String> urls;
+    private List<String> urls;
+
+    @Override
+    public List<String> getUrls() {
+        return urls;
+    }
 
 
 
@@ -67,22 +72,13 @@ public abstract class ScraperServiceImpl implements ScraperService {
         }
     }
     
-    public Set<ResponseDTO> getModelName(String model) {
-        // Using a set here to only store unique elements
-        Set<ResponseDTO> responseDTOS = new HashSet<>();
-        // Traversing through the urls
-        for (String url : urls) {
-
-            if (url.contains("afrikrea")) {
-                // method to extract data from Ikman.lk
-                extractDataFromAnka(responseDTOS, url + model);
-       
-            }
-
-        }
-        return responseDTOS;
-        
+    
+    @Override
+    public void saveData(Set<ResponseDTO> responseDTOS) {
+        // Logic to save data to a database
+        // Implement this method based on your database configuration
     }
+
 
 
 
