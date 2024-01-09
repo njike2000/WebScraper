@@ -67,7 +67,7 @@ public abstract class ScraperServiceImpl implements ScraperService {
         }
     }
     
-    public Set<ResponseDTO> getSellerName(String vehicleModel) {
+    public Set<ResponseDTO> getModelName(String model) {
         // Using a set here to only store unique elements
         Set<ResponseDTO> responseDTOS = new HashSet<>();
         // Traversing through the urls
@@ -75,7 +75,7 @@ public abstract class ScraperServiceImpl implements ScraperService {
 
             if (url.contains("afrikrea")) {
                 // method to extract data from Ikman.lk
-                extractDataFromAnka(responseDTOS, url + vehicleModel);
+                extractDataFromAnka(responseDTOS, url + model);
        
             }
 
