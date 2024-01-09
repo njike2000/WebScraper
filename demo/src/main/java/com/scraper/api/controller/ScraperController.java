@@ -23,11 +23,16 @@ public class ScraperController {
     public ScraperController(ScraperService scraperService) {
         this.scraperService = scraperService;
     }
-
+   
     @GetMapping("/riyasewana")
     public Set<ResponseDTO> scrapeRiyasewana(@RequestParam String url) {
         Set<ResponseDTO> responseDTOS = new HashSet<>();
         scraperService.extractDataFromAnka(responseDTOS, url);
         return responseDTOS;
+    }
+    @GetMapping(path = "/")
+    public Set<ResponseDTO> getVehicleByModel(@PathVariable String vehicleModel) {
+        return  scraperService.getSellerName(vehicleModel);
+
     }
 }
