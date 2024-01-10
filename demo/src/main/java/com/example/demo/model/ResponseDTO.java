@@ -5,6 +5,8 @@ import lombok.Data;
 @Data
 public class ResponseDTO {
 
+    //@Id
+   // @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
 

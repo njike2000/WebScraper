@@ -19,6 +19,9 @@ public class ScraperServiceImp implements ScraperService{
     @Value("#{'${website.urls}'.split(',')}")
     private List<String> urls;
 
+    //@Autowired
+   // private ResponseDTORepository responseDTORepository;
+
     @Override
     public List<String> getUrls() {
         return urls;
@@ -74,8 +77,10 @@ public class ScraperServiceImp implements ScraperService{
 
     @Override
     public void saveData(Set<ResponseDTO> responseDTOS) {
-        // Logic to save data to a database
-        // Implement this method based on your database configuration
+        for (ResponseDTO responseDTO : responseDTOS) {
+             //Assuming ResponseDTORepository extends JpaRepository<ResponseDTO, Long>
+           // responseDTORepository.save(responseDTO);
+        }
         System.out.println("==============Save==");
     }
 
