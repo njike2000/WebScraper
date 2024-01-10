@@ -7,9 +7,9 @@ website:
   
 spring:
   datasource:
-    url: jdbc:mariadb://localhost:3306/your_database_name  # Replace 'your_database_name' with your actual database name
-    username: your_username  # Replace 'your_username' with your MariaDB username
-    password: your_password  
+    url: jdbc:mariadb://localhost:3306/my_database  # Replace 'your_database_name' with your actual database name
+    username: root  # Replace 'your_username' with your MariaDB username
+    password:   
     driver-class-name: org.mariadb.jdbc.Driver
   jpa:
     hibernate:
