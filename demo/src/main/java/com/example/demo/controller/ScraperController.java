@@ -32,11 +32,26 @@ public class ScraperController {
          //Save the scraped data into the database
         service.saveData(responseDTOS);
 
+
+            // Log the scraped data to the console
+            printScrapedData(responseDTOS);
+
         return ResponseEntity.ok("Scraping process completed and data saved!");
         //return "ok entered";
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error occurred during scraping.");
+        }
+    }
+
+    private void printScrapedData(Set<ResponseDTO> responseDTOS) {
+        System.out.println("=== Scraped Data ===");
+        for (ResponseDTO responseDTO : responseDTOS) {
+            System.out.println("Title: " + responseDTO.getTitle());
+            System.out.println("URL: " + responseDTO.getUrl());
+            System.out.println("Price: " + responseDTO.getPrice());
+            System.out.println("Name: " + responseDTO.getName());
+            System.out.println("====================");
         }
     }
 }

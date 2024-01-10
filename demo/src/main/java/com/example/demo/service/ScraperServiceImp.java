@@ -82,6 +82,8 @@ public class ScraperServiceImp implements ScraperService{
            // responseDTORepository.save(responseDTO);
         }
         System.out.println("==============Save==");
-    }
 
+    }
 }
+
+
