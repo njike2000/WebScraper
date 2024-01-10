@@ -19,7 +19,7 @@ public abstract class ScraperServiceImpl implements ScraperService {
     // Reading data from property file to a list
     @Value("#{'${website.urls}'.split(',')}")
     private List<String> urls;
-
+    
     @Override
     public List<String> getUrls() {
         return urls;
@@ -77,6 +77,7 @@ public abstract class ScraperServiceImpl implements ScraperService {
     public void saveData(Set<ResponseDTO> responseDTOS) {
         // Logic to save data to a database
         // Implement this method based on your database configuration
+    	System.out.println("==============Save==");
     }
 
 

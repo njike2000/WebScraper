@@ -16,7 +16,7 @@ import service.ScraperService;
 
 
 @RestController
-@RequestMapping("/scrape")
+@RequestMapping("/api/v1/demo-controller")
 public class ScraperController {
 
     private final ScraperService scraperService;
@@ -26,23 +26,28 @@ public class ScraperController {
         this.scraperService = scraperService;
     }
    
-    @GetMapping("/start")
-    public ResponseEntity<String> startScraping() {
+    @GetMapping("/get")
+    public String startScraping() {
         Set<ResponseDTO> responseDTOS = new HashSet<>();
         
        String url = "https://www.afrikrea.com/fr/categories/clothing";
 
-        try {
+        //try {
         	  // Scraping data from the target URL
             scraperService.extractDataFromAnka(responseDTOS, url);
 
             // Save the scraped data into the database
             scraperService.saveData(responseDTOS);
 
-            return ResponseEntity.ok("Scraping process completed and data saved!");
-        } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error occurred during scraping.");
-        }
+            //return ResponseEntity.ok("Scraping process completed and data saved!");
+            return "ok entered";
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error occurred during scraping.");
+//        }
+    }
+    @GetMapping
+    public String hallo() {
+    	return "hLLO2";
     }
 }

@@ -1,3 +1,6 @@
+server:
+  port: 8081
+
 website:
   urls: https://www.afrikrea.com/fr/categories/clothing
 
