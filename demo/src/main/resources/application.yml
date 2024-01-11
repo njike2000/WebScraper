@@ -1,5 +1,7 @@
 website:
   urls: https://www.afrikrea.com/fr/categories/clothing
+        https://www.afrikrea.com/fr/categories/clothing?page=2
+        https://www.afrikrea.com/fr/categories/clothing?page=3
 
 
 
