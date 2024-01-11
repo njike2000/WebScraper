@@ -1,4 +1,5 @@
 About the Project
+
 The Spring Boot Project Template is designed to serve as a foundation for web applications using Spring Boot. It simplifies the setup process and provides a basic structure for building robust and secure applications.
 
 Main Features:
