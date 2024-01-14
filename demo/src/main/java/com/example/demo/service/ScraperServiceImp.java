@@ -10,10 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.StringUtils;
+
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 @Service
@@ -26,10 +27,14 @@ public class ScraperServiceImp implements ScraperService{
    private ResponseDTORepository responseDTORepository;
 
     @Override
-    public List<String> getUrls()
+    public List<ResponseDTO> getProducts(String searchKey)
     {
-        System.out.println("URLs: " + urls);
-        return urls;
+        if (!Objects.equals(searchKey, "")) {
+            return this.responseDTORepository.findByTitleIgnoreCase(searchKey);
+        } else {
+            // Si la requête de recherche est vide, retourner tous les produits
+            return this.responseDTORepository.findAll();
+        }
     }
 
 

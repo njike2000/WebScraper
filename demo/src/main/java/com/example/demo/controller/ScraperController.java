@@ -1,46 +1,57 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.UserDto;
 import com.example.demo.model.ResponseDTO;
 import com.example.demo.service.ScraperService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.security.Principal;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 @RestController
-@RequestMapping("api/scrape")
 public class ScraperController {
 
     @Autowired
-    ScraperService service;
+    ScraperService scraperService;
 
-    @GetMapping("/get")
-    public ResponseEntity<String> startScraping() {
+    @Autowired
+    UserDetailsService userDetailsService;
+
+    @PostMapping("")
+    public  ResponseEntity<Object> startScraping(Model model, Principal principal) {
         Set<ResponseDTO> responseDTOS = new HashSet<>();
+        UserDetails userDetails = userDetailsService.loadUserByUsername(principal.getName());
 
         String url = "https://www.afrikrea.com/fr/categories/clothing";
+        model.addAttribute("user", userDetails);
+
 
         try {
          //Scraping data from the target URL
-        service.extractDataFromAnka(responseDTOS, url);
+            scraperService.extractDataFromAnka(responseDTOS, url);
 
          //Save the scraped data into the database
-        service.saveData(responseDTOS);
+            scraperService.saveData(responseDTOS);
 
 
             // Log the scraped data to the console
-            printScrapedData(responseDTOS);
+        printScrapedData(responseDTOS);
 
-        return ResponseEntity.ok("Scraping process completed and data saved!");
-        //return "ok entered";
+            return new ResponseEntity<>(Map.of("message", "Scraping completed successfully", "status", true), HttpStatus.OK);
         } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error occurred during scraping.");
+        e.printStackTrace();
+        return new ResponseEntity<>(Map.of("message", "Error occurred during scraping", "status", false), HttpStatus.OK);
+
         }
     }
 
@@ -54,4 +65,5 @@ public class ScraperController {
             System.out.println("====================");
         }
     }
+
 }
