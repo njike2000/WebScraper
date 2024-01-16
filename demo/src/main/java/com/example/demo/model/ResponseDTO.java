@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "note")
+@Table(name = "Scraper")
 @Data
 public class ResponseDTO {
 
@@ -16,12 +16,11 @@ public class ResponseDTO {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
-    String title;
-    String url;
-    String price;
     String name;
+    String title;
+    String price;
     String manufacturer;
+    String url;
 
 
 
