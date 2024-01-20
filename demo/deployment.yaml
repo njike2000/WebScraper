@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: your-spring-app
+spec:
+  replicas: 3 # Adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: your-spring-app
+  template:
+    metadata:
+      labels:
+        app: your-spring-app
+    spec:
+      containers:
+      - name: your-spring-app
+        image: gcr.io/sinuous-city-406809/your-spring-app:latest # Replace with your GCR image
+        ports:
+        - containerPort: 8080
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: your-spring-app
+spec:
+  selector:
+    app: your-spring-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer

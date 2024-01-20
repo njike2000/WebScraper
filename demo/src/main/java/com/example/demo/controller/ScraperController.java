@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.UserDto;
 import com.example.demo.model.ResponseDTO;
 import com.example.demo.service.ScraperService;
 import org.springframework.beans.factory.annotation.Autowired;
