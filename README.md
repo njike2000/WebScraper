@@ -1,6 +1,6 @@
 *About the Project*
 
-The Spring Boot Project Template is designed to serve as a foundation for web applications using Spring Boot. It simplifies the setup process and provides a basic structure for building robust and secure applications.
+The Spring Boot Project Template is designed to serve as a foundation for web applications using Spring Boot. It simplifies the setup process and provides a basic structure for building robust and secure applications. In Project i scraped a Webside using jsoup Package of Java and saved the Data in a Database. The webapp is the deployed on Google Clood with the help of Kubernetes and Docker. You can also run the code from my Github repository
 
 Main Features:
 
@@ -19,7 +19,10 @@ Prerequisites
 Before running the project, ensure you have the following software installed:
 Java JDK 8 or later
 Maven
-Your favorite IDE IntelliJ 
+Your favorite IDE IntelliJ or VS code
+Docker
+kubernetes
+GKE
 
 
 Installation
