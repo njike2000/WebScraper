@@ -17,11 +17,12 @@ Getting Started
 
 Prerequisites
 Before running the project, ensure you have the following software installed:
-Java JDK 8 or later
-Maven
-Your favorite IDE IntelliJ or VS code
-Docker
-kubernetes
+
+Java JDK 8 or later,
+Maven,
+Your favorite IDE IntelliJ or VS code,
+Docker,
+kubernetes,
 GKE
 
 
