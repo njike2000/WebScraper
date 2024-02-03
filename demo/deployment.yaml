@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: your-spring-app
-        image: gcr.io/sinuous-city-406809/your-spring-app:latest # Replace with your GCR image
+        image: gcr.io/awesome-tempo-412920/your-spring-app:latest # Replace with your GCR image
         ports:
         - containerPort: 8080
 
