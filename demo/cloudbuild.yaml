@@ -25,5 +25,6 @@ steps:
 
 availableSecrets:
   secretManager:
-    - versionName: projects/awesome-tempo-412920/secrets/My First Project/versions/latest
+    - versionName: projects/awesome-tempo-412920/secrets/mysecret/versions/latest
       env: 'SSH_KEY'
+
