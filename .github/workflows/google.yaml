@@ -43,7 +43,7 @@ jobs:
       with:
         token_format: 'access_token'
         workload_identity_provider: 'projects/472643004208/locations/global/workloadIdentityPools/k8s-pool/providers/k8s-provider'
-        service_account: 's015252863635-scraper@$GCP_PROJECT_ID.iam.gserviceaccount.com'
+        service_account: 's015252863635-scraper@awesome-tempo-412920.iam.gserviceaccount.com'
 
     # Alternative option - authentication via credentials json
     # - id: 'auth'
