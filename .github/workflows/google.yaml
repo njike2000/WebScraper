@@ -22,8 +22,7 @@ env:
 
 
 jobs:
-  setup-build-publish-deploy:
-    name: Setup, Build, Publish, and Deploy
+  deploy:
     runs-on: ubuntu-latest
     env:
       IMAGE_TAG: ${{ github.sha }}
