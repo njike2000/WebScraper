@@ -67,21 +67,21 @@ jobs:
       working-directory: ./scraperapp
 
     - name: Setup Terraform
-         uses: hashicorp/setup-terraform@v2
+      uses: hashicorp/setup-terraform@v3
 
     - name: Terraform init
-       run: terraform init -backend-config="bucket=$TF_STATE_BUCKET_NAME" -backend-config="prefix=test"
-       working-directory: ./terraform
+      run: terraform init -backend-config="bucket=$TF_STATE_BUCKET_NAME" -backend-config="prefix=test"
+      working-directory: ./terraform
 
     - name: Terraform Plan
-        run: |
+      run: |
           terraform plan \
           -var="region=us-central1" \
           -var="project_id=$GCP_PROJECT_ID" \
           -var="container_image=us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG" \
           -out=PLAN
-        working-directory: ./terraform
+      working-directory: ./terraform
 
     - name: Terraform Apply
-        run: terraform apply PLAN
+      run: terraform apply PLAN
         working-directory: ./terraform
