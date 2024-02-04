@@ -1,0 +1,16 @@
+apiVersion: skaffold/v4beta8
+kind: Config
+metadata:
+  name: demo-
+build:
+  artifacts:
+    - image: gcr.io/sinuous-city-406809/your-spring-app
+      context: demo
+      buildpacks:
+        builder: gcr.io/buildpacks/builder:v1
+  tagPolicy:
+    sha256: {}
+  googleCloudBuild: {}
+manifests:
+  rawYaml:
+    - demo/deployment.yaml
