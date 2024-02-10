@@ -24,7 +24,6 @@ COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.jar ./app.jar
 
 # Expose the port the application runs on
 EXPOSE 8080
-
 # Run the JAR file
 CMD ["java", "-jar", "app.jar"]
 

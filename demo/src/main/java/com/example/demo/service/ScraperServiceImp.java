@@ -37,8 +37,6 @@ public class ScraperServiceImp implements ScraperService{
         }
     }
 
-
-
     public void extractDataFromAnka(Set<ResponseDTO> responseDTOS, String url) {
 
         try {
