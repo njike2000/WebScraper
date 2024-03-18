@@ -7,9 +7,9 @@ website:
 
 spring:
   datasource:
-    url: jdbc:mysql://34.172.228.231/scraper
-    username: root
-    password: scraper-db
+    url: jdbc:mysql://localhost:3306/my_database
+    username: scraperdb
+    password: scraper
   jpa:
     properties:
       hibernate:
