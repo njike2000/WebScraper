@@ -35,7 +35,7 @@ jobs:
         id: auth
         uses: google-github-actions/auth@v1
         with:
-          credentials_json: $projects/472643004208/secrets/mysecret
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
 
       # Configure Docker authentication
