@@ -36,8 +36,7 @@ jobs:
         uses: google-github-actions/auth@v1
         with:
           credentials_json: ${{ secrets.GCP_CREDENTIALS }}
-        retries: 3
-        continue-on-error: true
+
 
       # Configure Docker authentication
       - name: Configure Docker authentication
