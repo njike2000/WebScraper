@@ -38,7 +38,9 @@ jobs:
         id: auth
         uses: google-github-actions/auth@v1
         with:
-          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+          token_format: 'access_token'
+            workload_identity_provider: 'projects/472643004208/locations/global/workloadIdentityPools/k8s-pool/providers/k8s-provider'
+            service_account: 's015252863635-scraper@awesome-tempo-412920.iam.gserviceaccount.com'
 
 
       # Configure Docker authentication
