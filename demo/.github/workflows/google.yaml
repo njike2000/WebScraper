@@ -1,0 +1,70 @@
+# This workflow will build a docker container, publish it to Google Container Registry, and deploy it to GKE when there is a push to the "master" branch.
+#
+# To configure this workflow:
+#
+# 1. Ensure that your repository contains the necessary configuration for your Google Kubernetes Engine cluster, including deployment.yml, kustomization.yml, service.yml, etc.
+#
+# 2. Create and configure a Workload Identity Provider for GitHub (https://github.com/google-github-actions/auth#setting-up-workload-identity-federation)
+#
+# 3. Change the values for the GAR_LOCATION, GKE_ZONE, GKE_CLUSTER, IMAGE, REPOSITORY and DEPLOYMENT_NAME environment variables (below).
+#
+# For more support on how to run the workflow, please visit https://github.com/google-github-actions/setup-gcloud/tree/master/example-workflows/gke-kustomize
+
+name: Build and Deploy to GKE
+
+on:
+  push:
+    branches: [ "master" ]
+
+env:
+  GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  TF_STATE_BUCKET_NAME: ${{ secrets.GCP_TF_STATE_BUCKET }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_TAG: ${{ github.sha }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Authenticate to Google Cloud
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v0
+        with:
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+
+      # Configure Docker authentication
+      - name: Configure Docker authentication
+        run: gcloud auth configure-docker
+
+      # Build the Docker image
+      - name: Build Docker image
+        run: |
+          docker build -t us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG ./scraperapp
+          docker push us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG
+
+      # Set up Cloud SDK
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          service_account_key: ${{ secrets.GCP_CREDENTIALS }}
+
+      # Set up Terraform
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      # Terraform initialization
+      - name: Terraform Init
+        run: terraform init -backend-config="bucket=$TF_STATE_BUCKET_NAME" -backend-config="prefix=test" ./terraform
+
+      # Terraform Plan
+      - name: Terraform Plan
+        run: terraform plan -var="region=us-central1" -var="project_id=$GCP_PROJECT_ID" -var="container_image=us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG" -out=PLAN ./terraform
+
+      # Terraform Apply
+      - name: Terraform Apply
+        run: terraform apply PLAN ./terraform
