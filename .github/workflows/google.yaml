@@ -50,7 +50,7 @@ jobs:
       # Build the Docker image
       - name: Build Docker image
         run: |
-          ls -r
+          ls -R
           docker build -t us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG .
           docker push us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG
 
