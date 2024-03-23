@@ -72,7 +72,8 @@ jobs:
 
       # Terraform Plan
       - name: Terraform Plan
-        run: terraform plan -var="region=us-central1" -var="project_id=$GCP_PROJECT_ID" -var="container_image=us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG" -out=PLAN ./terraform
+        run: terraform -chdir=./terraform plan -var="region=us-central1" -var="project_id=$GCP_PROJECT_ID" -var="container_image=us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG" -out=PLAN
+
 
       # Terraform Apply
       - name: Terraform Apply
