@@ -77,4 +77,5 @@ jobs:
 
       # Terraform Apply
       - name: Terraform Apply
-        run: terraform apply PLAN ./terraform
+        run: terraform -chdir=./terraform apply
+
