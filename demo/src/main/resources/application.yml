@@ -8,8 +8,8 @@ website:
 spring:
   datasource:
     url: jdbc:mysql://34.172.228.231:3306/scraper
-    username: ${{ secrets.SPRING_DATASOURCE_USERNAME }}
-    password: ${{ secrets.SPRING_DATASOURCE_PASSWORD }}
+    username: scraper
+    password: njike2000
   jpa:
     properties:
       hibernate:
