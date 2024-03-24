@@ -77,5 +77,6 @@ jobs:
 
       # Terraform Apply
       - name: Terraform Apply
-        run: terraform -chdir=./terraform apply
+        run: terraform -chdir=./terraform apply -lock=false
+
 
