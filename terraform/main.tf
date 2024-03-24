@@ -1,12 +1,12 @@
 data "google_container_engine_versions" "default" {
-  location = "us-central1-c"
+  location = "europe-west3"
 }
 data "google_client_config" "current" {
 }
 
 resource "google_container_cluster" "default" {
   name               = "my-first-cluster"
-  location           = "us-central1-c"
+  location           = "europe-west3"  # Use europe-west3 for Frankfurt region
   initial_node_count = 3
   min_master_version = data.google_container_engine_versions.default.latest_master_version
 
