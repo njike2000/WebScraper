@@ -69,10 +69,10 @@ jobs:
       - name: Terraform Init
         run: terraform -chdir=./terraform init -backend-config="bucket=$TF_STATE_BUCKET_NAME" -backend-config="prefix=test" -lock=false
 
-
-        # Terraform Plan
+      # Terraform Plan
       - name: Terraform Plan
-        run: terraform -chdir=./terraform plan -var="region=us-central1" -var="project_id=$GCP_PROJECT_ID" -var="container_image=us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG" -out=PLAN
+        run: terraform -chdir=./terraform plan -var="region=us-central1" -var="project_id=$GCP_PROJECT_ID" -var="container_image=us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG" -out=PLAN -lock=false
+
 
 
       # Terraform Apply
