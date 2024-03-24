@@ -67,7 +67,7 @@ jobs:
 
       # Terraform initialization
       - name: Terraform Init
-        run: terraform -chdir=./terraform init -backend-config="bucket=$TF_STATE_BUCKET_NAME" -backend-config="prefix=test" -lock=false
+        run: terraform -chdir=./terraform init -backend-config="bucket=$TF_STATE_BUCKET_NAME" -lock=false
 
       # Terraform Plan
       - name: Terraform Plan
