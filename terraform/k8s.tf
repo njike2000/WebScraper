@@ -16,7 +16,7 @@ resource "kubernetes_deployment" "name" {
       spec {
         container {
           name  = "scrapercontainer"
-          image = var.nginx:1.21.6
+          image = "nginx:1.21.6"
           port {
             container_port = 80
           }
