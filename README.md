@@ -1,59 +1,65 @@
-*About the Project*
+### Cloud Technologies
+![docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
+![kubernetes](https://img.shields.io/badge/kubernetes-326ce5.svg?&style=for-the-badge&logo=kubernetes&logoColor=white)
+![terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
 
-The Spring Boot Project Template is designed to serve as a foundation for web applications using Spring Boot. It simplifies the setup process and provides a basic structure for building robust and secure applications. In Project i scraped a Webside using jsoup Package of Java and saved the Data in a Database. The webapp is the deployed on Google Clood with the help of Kubernetes and Docker. You can also run the code from my Github repository
-
-Main Features:
-
-Spring Security Integration:Secure your application with authentication and authorization.
-
-Thymeleaf Templates: Use the Thymeleaf templating engine for dynamic content rendering.
-
-
-Easy Deployment: 
-
-Deploy your application on platforms like Google Cloud effortlessly.
-Getting Started
+### Frontend Technologies
+![html](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![css](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
 
-Prerequisites
-Before running the project, ensure you have the following software installed:
-
-Java JDK 8 or later,
-Maven,
-Your favorite IDE IntelliJ or VS code,
-Docker,
-kubernetes,
-GKE
+### Backend Technologies
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![springboot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)
 
 
-Installation
 
-Clone the repository: git clone https://github.com/njike2000/WebScraper.git
-Navigate to the project directory: cd spring-boot-project
-Build the project: mvn clean install
-Run the application: mvn spring-boot:run
+## Instances
 
-Usage
-Once the project is running locally, visit http://localhost:8080 in your web browser to access the home page. The project includes a basic login system, and you can explore other pages as needed.
+TODO
 
-Spring Security Configuration
 
-This project includes Spring Security for authentication. Users can log in with the default credentials:
 
-Username: root
-Password: 
-Feel free to customize the security configuration in the SecurityConfig class.
+## Repositories:
+[https://github.com/njike2000/WebScraper/tree/master](https://github.com/njike2000/WebScraper/tree/master)
 
-Contributing
-We welcome contributions! If you find any issues, have feature requests, or want to contribute code, please follow these guidelines:
 
-Open an issue to discuss major changes.
-Fork the repository and create a new branch.
-Make your changes and create a pull request.
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Deployment:
 
-Contact
-For any questions, feedback, or collaboration opportunities, feel free to contact me:
+The deployment is seperated and documented in this repository [https://github.com/njike2000/WebScraper/tree/master](https://github.com/njike2000/WebScraper/tree/master)
 
-Email: samuelnjike6@gmail.com
+## Observability
+
+TODO
+
+
+## Services
+
+The backend consists of 3 services:
+
+`Poi Service`: The Scraper Service responsible for Scraping the website.
+
+`User Service`: The User Service handles user-related operations, including authentication, user profiles, and access control within the platform.
+
+
+
+
+## Changelog/Releasenotes
+
+TODO
+
+## CI/CD
+
+
+### Build-push-image Workflow
+ToDO
+
+
+## Credits 
+
+Thanks to the prometheus communuity for providing helpful helmcharts [kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack ).
+
+When it comes to terraform and gke we can recommand this guide which helped us a lot: [https://dev.to/admantium/google-kubernetes-engine-mostly-automated-installation-with-terraform-47dg](https://dev.to/admantium/google-kubernetes-engine-mostly-automated-installation-with-terraform-47dg) 
+
+This guide is also very good:[cert-manager-gke-guide](https://cert-manager.io/docs/tutorials/getting-started-with-cert-manager-on-google-kubernetes-engine-using-lets-encrypt-for-ingress-ssl/#7-create-an-issuer-for-lets-encrypt-staging)
