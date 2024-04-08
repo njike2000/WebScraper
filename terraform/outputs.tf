@@ -7,6 +7,6 @@ output "cluster_endpoint" {
 output "cluster_location" {
   value = google_container_cluster.default.location
 }
-output "load-balancer-ip" {
-  value = google_compute_address.default.address
-}
+#output "load-balancer-ip" {
+ # value = google_compute_address.default.address
+#}
