@@ -16,7 +16,7 @@ resource "kubernetes_deployment" "name" {
       spec {
         container {
           name  = "scrapercontainer"
-          image = var.container_image
+          image = var.nginx:1.21.6
           port {
             container_port = 80
           }
@@ -27,10 +27,10 @@ resource "kubernetes_deployment" "name" {
 }
 
 
-resource "google_compute_address" "default" {
-  name   = "ipforservice"
-  region = var.region
-}
+# resource "google_compute_address" "default" {
+# name   = "ipforservice"
+  #region = var.region
+#}
 resource "kubernetes_service" "appservice" {
   metadata {
     name = "scraperapp-lb-service"
