@@ -1,22 +1,24 @@
 resource "kubernetes_deployment" "name" {
   metadata {
     name = "your-spring-app"
-
   }
   spec {
     replicas = 1
     selector {
-
+      match_labels = {
+        app = "your-spring-app"
+      }
     }
     template {
       metadata {
-        name = "your-spring-app"
-
+        labels = {
+          app = "your-spring-app"
+        }
       }
       spec {
         container {
           name  = "scrapercontainer"
-          image = "nginx:1.21.6"
+          image = var.container_image
           port {
             container_port = 80
           }
