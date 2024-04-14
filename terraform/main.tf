@@ -19,5 +19,10 @@ resource "google_container_cluster" "default" {
     when    = destroy
     command = "sleep 90"
   }
+  lifecycle {
+    ignore_changes = [
+      node_config[0].machine_type,
+    ]
+  }
 }
 
