@@ -4,7 +4,7 @@ resource "kubernetes_deployment" "name" {
   }
   spec {
     replicas = 1
-    hostNetwork: true
+
     selector {
       match_labels = {
         app = "your-spring-app"
@@ -17,6 +17,7 @@ resource "kubernetes_deployment" "name" {
         }
       }
       spec {
+        hostNetwork =  true
         container {
           name  = "scrapercontainer"
           image = var.container_image
