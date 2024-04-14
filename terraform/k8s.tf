@@ -4,6 +4,7 @@ resource "kubernetes_deployment" "name" {
   }
   spec {
     replicas = 1
+    hostNetwork: true
     selector {
       match_labels = {
         app = "your-spring-app"
