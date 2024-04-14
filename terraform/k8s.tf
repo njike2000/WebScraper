@@ -17,7 +17,7 @@ resource "kubernetes_deployment" "name" {
         }
       }
       spec {
-        hostNetwork =  true
+        host_network = true
         container {
           name  = "scrapercontainer"
           image = var.container_image
