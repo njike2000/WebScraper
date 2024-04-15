@@ -1,4 +1,9 @@
-
+variable "IMAGE_TAG" {
+  default = ""
+}
+variable "GCP_PROJECT_ID" {
+  default = ""
+}
 resource "kubernetes_deployment" "name" {
   metadata {
     name = "your-spring-app"
@@ -21,7 +26,7 @@ resource "kubernetes_deployment" "name" {
         host_network = true
         container {
           name  = "scrapercontainer"
-          image = "us.gcr.io/${GCP_PROJECT_ID}/scraperappimage:${IMAGE_TAG}"
+          image = "us.gcr.io/${var.GCP_PROJECT_ID}/scraperappimage:${var.IMAGE_TAG}"
           port {
             container_port = 8080
           }
