@@ -22,7 +22,7 @@ resource "kubernetes_deployment" "name" {
           name  = "scrapercontainer"
           image = var.container_image
           port {
-            container_port = 80
+            container_port = 8080
           }
         }
       }
