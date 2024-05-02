@@ -26,7 +26,7 @@ resource "kubernetes_deployment" "name" {
         host_network = true
         container {
           name  = "scrapercontainer"
-          image = "us.gcr.io/${var.GCP_PROJECT_ID}/scraperappimage:${var.IMAGE_TAG}"
+          image = var.container_image
           port {
             container_port = 8080
           }

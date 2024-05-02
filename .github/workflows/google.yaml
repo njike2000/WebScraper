@@ -80,8 +80,8 @@ jobs:
         run: terraform -chdir=./terraform apply -lock=false
 
           # Update Kubernetes deployment with the new image
-    #- name: Update Kubernetes deployment
-      #  run: |
-       #   kubectl set image deployment/your-spring-app your-spring-app=us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG
+    #  - name: Update Kubernetes deployment
+    #    run: |
+    #      kubectl set image deployment/your-spring-app your-spring-app=us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG
 
 
