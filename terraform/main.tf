@@ -3,7 +3,7 @@ data "google_container_engine_versions" "default" {
   location = "europe-west3"
 }
 
-data "google_client_config" "default" {}
+data "google_client_config" "current" {}
 
 # Define the GKE cluster resource
 resource "google_container_cluster" "default" {
