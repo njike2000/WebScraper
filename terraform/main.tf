@@ -9,7 +9,7 @@ data "google_client_config" "current" {}
 resource "google_container_cluster" "default" {
   name               = "my-first-cluster"
   location           = "europe-central2"
-  initial_node_count = 3
+  initial_node_count = 2
   min_master_version = data.google_container_engine_versions.default.latest_master_version
 
   # Set deletion_protection to false
