@@ -1,0 +1,604 @@
+[33mcommit 71c5a2b7b10095a0b8342bdb154bc9f9dcb8c503[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Apr 14 23:17:08 2024 +0200
+
+    update terraform k8s.ft
+
+[33mcommit 80e817e3cf370fc4de5bd44a9a4fe72467547f32[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Apr 14 22:36:56 2024 +0200
+
+    update terraform k8s.ft
+
+[33mcommit 6a486471e7d404d87fcf92b7f6574e07d6ee27a6[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Apr 14 22:33:49 2024 +0200
+
+    update terraform k8s.ft and outputs.tf
+
+[33mcommit 27b1d254a59b2783e038ddf06b4f2bf859517f4b[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Apr 14 22:30:43 2024 +0200
+
+    update terraform k8s.ft and outputs.tf
+
+[33mcommit 4933308049288e046818b934e554fd4f55250010[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Apr 14 22:24:26 2024 +0200
+
+    update terraform k8s.ft and outputs.tf
+
+[33mcommit 52a237006a494fba73bc8d6b78594edf751f36f6[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Apr 14 22:03:41 2024 +0200
+
+    update terraform k8s.ft and outputs.tf
+
+[33mcommit 758520b0dfc28c5618ed2960d69df04332ef86d6[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Mon Apr 8 22:13:51 2024 +0200
+
+    update terraform k8s.ft and outputs.tf
+
+[33mcommit fb41f0a8d938a8031d1f04e132a1bb1fb37ff267[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Mon Apr 8 22:08:52 2024 +0200
+
+    update terraform k8s.ft
+
+[33mcommit f6115b054de36f700dbe8f6c556ea428fb29aaa3[m
+Merge: 08068aa b12ea8f
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Mon Apr 8 22:06:32 2024 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 08068aa0b9c229008134135d9dce04c26720db3e[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Mon Apr 8 22:06:02 2024 +0200
+
+    update terraform k8s.ft
+
+[33mcommit b12ea8f4c467bb61a4ef0fd5492729ce09e5a842[m
+Author: njike2000 <87072073+njike2000@users.noreply.github.com>
+Date:   Tue Apr 2 16:29:20 2024 +0200
+
+    Update README.md
+
+[33mcommit db545d6dbb4d1ca3516681d0213bff55ab3ebb0b[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Mar 24 23:15:47 2024 +0100
+
+    update terraform config( Cluster region)
+
+[33mcommit 11951cb592099bc045c3a734f2c05bb9d09536ed[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Mar 24 22:34:27 2024 +0100
+
+    update terraform config( Cluster region)
+
+[33mcommit 3f0eb02ab7f3ad0cecdb2a939039513faaa80d78[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Mar 24 21:41:05 2024 +0100
+
+    update terraform config( Cluster region)
+
+[33mcommit 774c3157a28c5c9a3623906279b2e0cf892ebade[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Mar 24 01:19:35 2024 +0100
+
+    update terraform apply
+
+[33mcommit 588b10e01562f8aaa244735fe239805aab76582e[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Mar 24 01:16:53 2024 +0100
+
+    update terraform plan
+
+[33mcommit f71ed64c7f299ae4cb0939a9ec871070d2b56b82[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Mar 24 01:12:58 2024 +0100
+
+    update terraform init
+
+[33mcommit 3a71da1d1fb03707c9376d5d783a3be89aad4375[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Mar 24 00:57:22 2024 +0100
+
+    update database access
+
+[33mcommit 03d70ca75fb3f3295ae07f1f00d1ac3ecd1e2cc5[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Mar 24 00:55:50 2024 +0100
+
+    update database access
+
+[33mcommit 625de4d24139405ece370625ca83b58a23b7ef36[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Mar 24 00:52:35 2024 +0100
+
+    update database access
+
+[33mcommit 74acc5765d28e309a7d3f9de0e4330c2f8ef4603[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Mar 23 22:38:02 2024 +0100
+
+    update terraform apply
+
+[33mcommit 717c03d6b07d7ed9ef31b49725b76a4321e731a5[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Mar 23 22:36:00 2024 +0100
+
+    update terraform plan
+
+[33mcommit cbe33e373b89f9e225549a7c72c0bfcd8b46b062[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Mar 23 22:33:05 2024 +0100
+
+    update terraform initialisation
+
+[33mcommit 1b368f3d502b816635d3ddcb424d09e129b19dce[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Mar 23 22:24:35 2024 +0100
+
+    update terraform initialisation
+
+[33mcommit 343144c23a18bdcca7e640c2143a13b700e511b1[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Mar 23 22:15:22 2024 +0100
+
+    update the database in app.yml
+
+[33mcommit 08aab2ef86b82a8e24afce1bf62b28b3e06f7b8f[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Mar 23 21:51:31 2024 +0100
+
+    update the build Context with the right path
+
+[33mcommit 97b7b11a5416fd543fa0ef9d8211816e920d7ab1[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Mar 23 21:49:27 2024 +0100
+
+    add the bug ls -R
+
+[33mcommit ecffe181cc1b9d8716ae9e369a1e2617f7b3e8cb[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Mar 23 21:48:04 2024 +0100
+
+    rename docker context
+
+[33mcommit fc8979fa01ef567e083ac2a007b43e1e3c611347[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Mar 23 21:46:10 2024 +0100
+
+    rename docker context
+
+[33mcommit 855f10b883bcaca785c108b23808c0a591d797c3[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Mar 23 21:41:06 2024 +0100
+
+    changes
+
+[33mcommit 1c7f5865a9239a46b5be6a7e789ee192c60ce177[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Mar 20 19:25:00 2024 +0100
+
+    changes
+
+[33mcommit 6bbef6615098e99b4af8f78e7e07c6a267dee7ec[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Mar 20 19:16:07 2024 +0100
+
+    changes
+
+[33mcommit 0e9348c6c5d757c7c97f91a4b8f9b3c7d597aba1[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Mar 20 19:11:59 2024 +0100
+
+    changes
+
+[33mcommit 1c58575aa8a76db203d7b014d30d98a9375ea155[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Mar 20 18:48:41 2024 +0100
+
+    changes
+
+[33mcommit e450f34f339dd7efed7bc2f60ff76b9368f1f247[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Mar 20 18:47:40 2024 +0100
+
+    changes
+
+[33mcommit cc6ab04b02b348bcd2ba52babdae05095979c7fd[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Mar 20 18:45:48 2024 +0100
+
+    changes
+
+[33mcommit 787736a5986b9d4aafa76dcd9eae90f22fff2499[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Mar 20 18:39:11 2024 +0100
+
+    changes
+
+[33mcommit d0146b7617b5b460eb9325378d1161f7cebe17be[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Mar 20 18:26:47 2024 +0100
+
+    changes
+
+[33mcommit 0219d53cd23a05267069c58bcd5bf1d9f8ad0f15[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Mar 20 18:18:40 2024 +0100
+
+    changes
+
+[33mcommit 057aeb4db44b53df8216f49e37266be9e832563d[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Mar 20 18:18:08 2024 +0100
+
+    changes
+
+[33mcommit 4979af6f39d1264b0b1c82d9360f3cbf3acb2b34[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Mar 20 18:15:26 2024 +0100
+
+    changes
+
+[33mcommit 8985a7f56cd3e5dcd1fc63fc702c028d6a10afa2[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Mar 20 18:13:03 2024 +0100
+
+    changes
+
+[33mcommit e4a441193ebc425272e52a56611adc273b90fe98[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Mar 20 18:08:50 2024 +0100
+
+    changes
+
+[33mcommit c1c1c7449ad5bcd78504d13b406da234680f40cc[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Mar 20 18:02:20 2024 +0100
+
+    n
+
+[33mcommit 4604fff02c47013117d2fee915e284a8e133c9c4[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Mar 20 18:01:15 2024 +0100
+
+    n
+
+[33mcommit ef2461a9ae51bbb030c98b6f84372f43248986e7[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Mon Mar 18 19:48:39 2024 +0100
+
+    g
+
+[33mcommit 14482565c739e30bd824623e98288b72437637fc[m
+Merge: cb6ead5 43a34f2
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Feb 10 21:51:27 2024 +0100
+
+    changes
+
+[33mcommit 43a34f27b1407c708e3df87706bf9f455071daba[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Feb 10 21:06:20 2024 +0100
+
+    update app config
+
+[33mcommit cb6ead520dd8575b7f06c6b258dc44b72b4c85db[m
+Merge: aeb0d66 d7fe55b
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Feb 10 13:45:47 2024 +0100
+
+    Merge branch 'master' of https://github.com/njike2000/WebScraper
+
+[33mcommit d7fe55bdec8d1aa997865866b2149e71cb22bae5[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Feb 10 13:35:44 2024 +0100
+
+    update package version
+
+[33mcommit aeb0d6692c80739163c598c14d8951ff6249e0df[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Feb 10 13:27:20 2024 +0100
+
+    neu
+
+[33mcommit e54351af91d6990154ca84dc89a6714c1782526f[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Fri Feb 9 08:34:15 2024 +0100
+
+    f
+
+[33mcommit e61934852a10cd00288f08ffa7bb5aaefc477e1c[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Fri Feb 9 06:24:15 2024 +0100
+
+    f
+
+[33mcommit 2a3bef2fd27c683c14180681780e0403f71d11eb[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Feb 4 19:54:39 2024 +0100
+
+    changes
+
+[33mcommit 3e9a27e5cf8ff6db8783c43ad2020756cf1c61e1[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Feb 4 14:46:17 2024 +0100
+
+    changes
+
+[33mcommit bc42438a4eb4aaaefab2f676f0a13508f36ef7f9[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Feb 4 14:28:08 2024 +0100
+
+    changes
+
+[33mcommit 7d8d0c9216c9faea633165c51962709b65291379[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Feb 4 14:26:35 2024 +0100
+
+    changes
+
+[33mcommit 5f6a6183dffdf1da02f480c035f8dbe3c9c43fe0[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Feb 4 14:23:26 2024 +0100
+
+    changes
+
+[33mcommit 55b49bd98a2bb9e4cfce7617f47bc2205aecc426[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Feb 4 03:05:22 2024 +0100
+
+    changes
+
+[33mcommit 82c2c302bf0b5702e4e166153f5cc91a132b90df[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Feb 4 03:01:48 2024 +0100
+
+    changes
+
+[33mcommit 514b14736a310b35934cfb0871fe9210a8d421ab[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Feb 4 02:59:42 2024 +0100
+
+    Yess
+
+[33mcommit cefcc5b79b25757efbaf2e92cc75586aa54d1ceb[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Feb 4 02:44:21 2024 +0100
+
+    changes
+
+[33mcommit f96755954c4fd266a7348cb53fbed253d5a32ca7[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Feb 4 00:39:26 2024 +0100
+
+    j
+
+[33mcommit 0d69e343cda8044459f2ae3e76eac02c6ca6b9a7[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Feb 3 23:57:03 2024 +0100
+
+    hhe
+
+[33mcommit 2854647a78578f472a534546e57f55b0ec25f785[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Feb 3 23:54:40 2024 +0100
+
+    hhe
+
+[33mcommit 8f9c81ad016685ae5bcd1cd659e7148ad5032406[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Feb 3 23:51:00 2024 +0100
+
+    hhe
+
+[33mcommit 3a4e7d7ee7a02c0dd4d711e505c1be0a573ed31c[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Jan 31 22:50:09 2024 +0100
+
+    kne
+
+[33mcommit 6ca32ddcdcc8a0b65a1f5f12326f42febb272783[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Jan 31 22:44:45 2024 +0100
+
+    Âj
+
+[33mcommit d9d91c5da79ebf6ee5089a9e0bc566293368e0f1[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Jan 28 20:58:28 2024 +0100
+
+    data
+
+[33mcommit df1d748adce37b195139f42721c698fdc54748f6[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Jan 28 19:55:07 2024 +0100
+
+    nothinh
+
+[33mcommit f80ce8afa9f838f6cfa189e6cc02aa39922b4f63[m
+Author: njike2000 <87072073+njike2000@users.noreply.github.com>
+Date:   Thu Jan 25 10:18:03 2024 +0100
+
+    Update README.md
+
+[33mcommit 97c8e1a5f91ed1479539128163a6c1612deb6bee[m
+Author: njike2000 <87072073+njike2000@users.noreply.github.com>
+Date:   Thu Jan 25 10:17:29 2024 +0100
+
+    Update README.md
+
+[33mcommit 71ab5b70a453e37c710918a953a0f679bb06e170[m
+Author: njike2000 <87072073+njike2000@users.noreply.github.com>
+Date:   Sat Jan 20 16:09:00 2024 +0100
+
+    Create google.yml
+
+[33mcommit ffc161889fa3fd49fbd635c3322967b1d61acb32[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Jan 20 16:08:11 2024 +0100
+
+    ne
+
+[33mcommit d5558b736364cf8b5a957588c23ce767f484a1eb[m
+Author: njike2000 <87072073+njike2000@users.noreply.github.com>
+Date:   Sat Jan 20 15:49:31 2024 +0100
+
+    Create main.yml
+
+[33mcommit 2bfb9cf9a69ce137ee3f9cd5f09a3b68d6fb40fc[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sat Jan 20 15:45:04 2024 +0100
+
+    start deployment
+
+[33mcommit 80a7d9acbb782b46bcbc8809d6c598bab1cc86f7[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Jan 17 16:46:50 2024 +0100
+
+    Arranged imports
+
+[33mcommit af8d60d5ce0c7f2c5174469b72b46773b11c927e[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Tue Jan 16 22:26:51 2024 +0100
+
+    nothing
+
+[33mcommit 3251de950901d8ba5b8e91d6440e1b3fc2e73c4c[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Tue Jan 16 19:56:13 2024 +0100
+
+    updates
+
+[33mcommit d84ea917101c80b0175e075d33b9b008046c67b6[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Jan 14 17:27:47 2024 +0100
+
+    feat:authentication and displaying project with search input
+
+[33mcommit b77acba749982aae88db2aef558fe21897edbfa0[m
+Merge: dbc95d1 4a09193
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Thu Jan 11 22:27:36 2024 +0100
+
+    Merge branch 'master' of github-sam:njike2000/WebScraper
+
+[33mcommit 4a09193cd18c9f8750317423e533b63d315f2d5e[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Thu Jan 11 22:21:44 2024 +0100
+
+    Application.yml update
+
+[33mcommit dbc95d1536adfcdf1aefb05e0add4c30877b4ab7[m
+Author: njike2000 <87072073+njike2000@users.noreply.github.com>
+Date:   Thu Jan 11 21:13:14 2024 +0100
+
+    Update README.md
+
+[33mcommit fa36fb2f43005e02068496f6948f4d6b5028c0c9[m
+Author: njike2000 <87072073+njike2000@users.noreply.github.com>
+Date:   Thu Jan 11 21:08:10 2024 +0100
+
+    Update README.md
+
+[33mcommit cb4242e642f717a653250f5ea5b6e52e79d9f9a8[m
+Author: njike2000 <87072073+njike2000@users.noreply.github.com>
+Date:   Thu Jan 11 21:06:44 2024 +0100
+
+    Update README.md
+
+[33mcommit b5f52af63a1d65a3f20d90ac41736630f8d61f20[m
+Author: njike2000 <87072073+njike2000@users.noreply.github.com>
+Date:   Thu Jan 11 21:06:06 2024 +0100
+
+    Create README.md
+
+[33mcommit 3c2ac1a2d5aee249f979a7a83d748dede825e1e5[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Thu Jan 11 19:49:17 2024 +0100
+
+    Databank and scraper are operational
+
+[33mcommit a7ca1f0c4a8a9a90723134542aa4d6186a279387[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Thu Jan 11 00:03:32 2024 +0100
+
+    notihn
+
+[33mcommit bdb4719c4262e8fec3a78afd86bc6361cd57abb3[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Jan 10 23:05:44 2024 +0100
+
+    ServiceImplement must be checked out for Database connection
+
+[33mcommit 803c25833b8fc6fa565e2163c8bcc504328639a8[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Jan 10 22:08:05 2024 +0100
+
+    New updates
+
+[33mcommit 81e2259e41c538b557332e451d0083be7d031d34[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Jan 10 15:40:46 2024 +0100
+
+    Application properties updare
+
+[33mcommit ed9ebe4b55a684063828502152c5f3a684b54283[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Wed Jan 10 15:38:59 2024 +0100
+
+    Database Connected
+
+[33mcommit 90d479fb1510e4c8354774a5715ee8c9e0238c30[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Tue Jan 9 12:27:28 2024 +0100
+
+    update but problem in Controller
+
+[33mcommit 67b344cbff00faf659bcf340872644545e45bbd4[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Tue Jan 9 04:14:34 2024 +0100
+
+    update
+
+[33mcommit 7609c0ff11fc053f63aded4e3c16defd2979986f[m
+Merge: 1948119 fa4ccd3
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Tue Jan 9 04:06:56 2024 +0100
+
+    Merge ressolved
+
+[33mcommit fa4ccd3d2162bb3277a824bcb64a44c4ec23a761[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Mon Jan 8 23:38:36 2024 +0100
+
+    chore:update git ignore
+
+[33mcommit 1948119eb6e975f9af80994a41a7144b6424c90e[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Jan 7 21:28:56 2024 +0100
+
+    Update in ScraperController
+
+[33mcommit e0a0de3b66808f84c2073590a2bfa932bcc7efa6[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Sun Jan 7 21:01:59 2024 +0100
+
+    Updates
+
+[33mcommit 210f79f231e3769563d2ab2861b73ad4b756c5ca[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Thu Dec 21 15:29:30 2023 +0100
+
+    Changes in Scraperservice
+
+[33mcommit 1b4364bfb9bd3a49cffa1c7a648bdca1eccc332d[m
+Author: menj1001 <menj1001@stud.hs-kl.de>
+Date:   Thu Dec 21 15:03:53 2023 +0100
+
+    Initial commit
