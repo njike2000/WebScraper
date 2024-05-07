@@ -46,7 +46,7 @@ resource "kubernetes_service" "appservice" {
   }
   spec {
     type = "LoadBalancer"
-    ports {
+    port {
       port        = 8080
       target_port = 8080
     }
