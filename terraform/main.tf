@@ -26,10 +26,6 @@ resource "google_container_cluster" "default" {
   }
 }
 
-# Define the Kubernetes deployment resource
-resource "kubernetes_deployment" "name" {
-  # Define the deployment configuration...
-}
 
 # Define the workflow for deploying the infrastructure
 # This could include steps such as authentication, Docker image build, Terraform initialization, plan, and apply.
