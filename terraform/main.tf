@@ -10,7 +10,7 @@ resource "google_container_cluster" "default" {
   initial_node_count = 3
   min_master_version = data.google_container_engine_versions.default.latest_master_version
 
-  deletion_protection = false
+  deletion_protection = false  # Set deletion_protection to false
 
   node_config {
     machine_type = "g1-small"
@@ -21,10 +21,12 @@ resource "google_container_cluster" "default" {
     when    = destroy
     command = "sleep 90"
   }
+}
+
 #  lifecycle {
  #   ignore_changes = [
  #     node_config[0].machine_type,
  #   ]
  # }
-}
+
 
