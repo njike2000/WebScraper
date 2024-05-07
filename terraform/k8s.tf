@@ -40,22 +40,18 @@ resource "kubernetes_deployment" "name" {
   }
 }
 
-
-# resource "google_compute_address" "default" {
-# name   = "ipforservice"
-  #region = var.region
-#}
-#resource "kubernetes_service" "appservice" {
-#  metadata {
-#    name = "scraperapp-lb-service"
-#  }
-#  spec {
- #   type             = "LoadBalancer"
- #   load_balancer_ip = google_compute_address.default.address
-#    port {
- #     port        = 8080
- #     target_port = 8080
-#    }
-
-#  }
-#}
+resource "kubernetes_service" "appservice" {
+  metadata {
+    name = "scraperapp-lb-service"
+  }
+  spec {
+    type = "LoadBalancer"
+    ports {
+      port        = 8080
+      target_port = 8080
+    }
+    selector = {
+      app = "your-spring-app"
+    }
+  }
+}
