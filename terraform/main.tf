@@ -15,6 +15,8 @@ resource "google_container_cluster" "default" {
   # Set deletion_protection to false
   deletion_protection = false
 
+  create_timeout = "120m"
+
   node_config {
     machine_type = "g1-small"
     disk_size_gb = 32
