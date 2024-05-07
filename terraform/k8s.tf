@@ -1,13 +1,16 @@
 variable "IMAGE_TAG" {
   default = ""
 }
+
 variable "GCP_PROJECT_ID" {
   default = ""
 }
+
 resource "kubernetes_deployment" "name" {
   metadata {
     name = "your-spring-app"
   }
+
   spec {
     replicas = 1
 
@@ -16,14 +19,15 @@ resource "kubernetes_deployment" "name" {
         app = "your-spring-app"
       }
     }
+
     template {
       metadata {
         labels = {
           app = "your-spring-app"
         }
       }
+
       spec {
-        host_network = true
         container {
           name  = "scrapercontainer"
           image = var.container_image
