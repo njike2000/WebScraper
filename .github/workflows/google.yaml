@@ -71,13 +71,13 @@ jobs:
 
       # Terraform Plan
       - name: Terraform Plan
-        run: terraform -chdir=./terraform plan -var="region=europe-west3" -var="project_id=$GCP_PROJECT_ID" -var="container_image=us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG" -out=PLAN -lock=false
+        run: terraform -chdir=./terraform plan -var="region=europe-central2" -var="project_id=$GCP_PROJECT_ID" -var="container_image=us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG" -out=PLAN -lock=false
 
 
 
       # Terraform Apply
       - name: Terraform Apply
-        run: terraform -chdir=./terraform apply -lock=false -auto-approve -var="region=europe-west3" -var="project_id=$GCP_PROJECT_ID" -var="container_image=us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG"
+        run: terraform -chdir=./terraform apply -lock=false -auto-approve -var="region=europe-central2" -var="project_id=$GCP_PROJECT_ID" -var="container_image=us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG"
 
           # Update Kubernetes deployment with the new image
     #  - name: Update Kubernetes deployment
