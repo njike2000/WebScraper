@@ -15,14 +15,17 @@ resource "google_container_cluster" "default" {
     disk_size_gb = 32
   }
 
+  # Increase the timeout period to 60 minutes
+  timeouts {
+    create = "60m"
+    update = "60m"
+    delete = "60m"
+  }
+
   provisioner "local-exec" {
     when    = destroy
     command = "sleep 90"
   }
-#  lifecycle {
- #   ignore_changes = [
- #     node_config[0].machine_type,
- #   ]
- # }
 }
+
 
