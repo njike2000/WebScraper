@@ -79,9 +79,10 @@ jobs:
       - name: Terraform Apply
         run: terraform -chdir=./terraform apply -lock=false -auto-approve -var="region=europe-central2" -var="project_id=$GCP_PROJECT_ID" -var="container_image=us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG"
 
-          # Update Kubernetes deployment with the new image
-    #  - name: Update Kubernetes deployment
-    #    run: |
-    #      kubectl set image deployment/your-spring-app your-spring-app=us.gcr.io/$GCP_PROJECT_ID/scraperappimage:$IMAGE_TAG
+      # Update Kubernetes deployment with the new image
+      - name: Update Kubernetes deployment
+        run: |
+          kubectl set image deployment/my-first-app my-first-app=us.gcr.io/${{ secrets.GCP_PROJECT_ID }}/scraperappimage:${{ github.sha }}
+
 
 
