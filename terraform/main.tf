@@ -13,7 +13,7 @@ resource "google_container_cluster" "default" {
   min_master_version = data.google_container_engine_versions.default.latest_master_version
 
   # Set deletion_protection to false
-  deletion_protection = false
+  #deletion_protection = false
 
   node_config {
     machine_type = "g1-small"
@@ -25,7 +25,6 @@ resource "google_container_cluster" "default" {
     command = "sleep 90"
   }
 }
-
 # Define the workflow for deploying the infrastructure
 # This could include steps such as authentication, Docker image build, Terraform initialization, plan, and apply.
 
