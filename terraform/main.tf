@@ -15,7 +15,12 @@ resource "google_container_cluster" "default" {
   # Set deletion_protection to false
   deletion_protection = false
 
-  create_timeout = "120m"
+  // Set timeout configuration
+  timeouts {
+    create = "120m"  // Maximum time to wait for resource creation
+    update = "60m"   // Maximum time to wait for resource updates
+    delete = "60m"   // Maximum time to wait for resource deletion
+  }
 
   node_config {
     machine_type = "g1-small"
