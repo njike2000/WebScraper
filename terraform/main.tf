@@ -1,6 +1,6 @@
 # Define data sources to fetch required information
 data "google_container_engine_versions" "default" {
-  location = "us-central1"
+  location = "europe-west3"
 }
 
 data "google_client_config" "current" {}
@@ -8,7 +8,7 @@ data "google_client_config" "current" {}
 # Define the GKE cluster resource
 resource "google_container_cluster" "default" {
   name               = "my-first-cluster"
-  location           = "us-central1"
+  location           = "europe-west3-b"
   initial_node_count = 3
   min_master_version = data.google_container_engine_versions.default.latest_master_version
 
