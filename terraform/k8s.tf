@@ -45,7 +45,7 @@ resource "kubernetes_service" "appservice" {
     name = "scraperapp-lb-service"
   }
   spec {
-    type = "ClusterIp"
+    type = "LoadBalancer"
     port {
       port        = 8080
       target_port = 8080
