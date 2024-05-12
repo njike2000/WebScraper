@@ -14,6 +14,10 @@
 ![springboot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)
 
 
+## Why a ScraperApp?
+
+I decided to build a webScraper for African E-commerce WebSites Because i was tired of looking for and article i want to buy for long and at a better price. There are somany other Price comparators but non for the African E-commerce Market. So i thought it important to creat one.  I will further develop it so it could be i use some and help you save some time.
+
 
 ## Instances
 
@@ -53,7 +57,10 @@ TODO
 
 
 ### Build-push-image Workflow
-ToDO
+I used Github Actions to build the projects/dockerfiles and pusht them to the Github Container Registry.
+Currently ther are 2 published containers:
+- `docker-compose`for the projekt
+- `docker-file`for the datebase
 
 
 ## Credits 
