@@ -15,7 +15,7 @@ resource "google_container_cluster" "default" {
   # Set deletion_protection to false
   deletion_protection = false
 
-  // Set timeout configuration
+  // Set timeout configurationx
   timeouts {
     create = "120m"  // Maximum time to wait for resource creation
     update = "60m"   // Maximum time to wait for resource updates
