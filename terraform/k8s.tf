@@ -32,7 +32,7 @@ resource "kubernetes_deployment" "name" {
           name  = "scrapercontainer"
           image = var.container_image
           port {
-            container_port = 8080
+            container_port = 80
           }
         }
       }
@@ -47,8 +47,8 @@ resource "kubernetes_service" "appservice" {
   spec {
     type = "LoadBalancer"
     port {
-      port        = 8080
-      target_port = 8080
+      port        = 80
+      target_port = 80
     }
     selector = {
       app = "your-spring-app"
