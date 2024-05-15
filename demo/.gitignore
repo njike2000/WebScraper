@@ -31,3 +31,17 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Ignore log files
+*.log
+*.log.*
+logs/
+log/
+
+# Other common ignores
+node_modules/
+dist/
+.env
+.DS_Store
+*.bak
+*.tmp
