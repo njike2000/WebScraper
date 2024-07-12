@@ -27,29 +27,29 @@ public class ScraperController {
     UserDetailsService userDetailsService;
 
     @PostMapping("")
-    public  ResponseEntity<Object> startScraping(Model model, Principal principal) {
+    public ResponseEntity<Object> startScraping(Model model, Principal principal) {
         Set<ResponseDTO> responseDTOS = new HashSet<>();
         UserDetails userDetails = userDetailsService.loadUserByUsername(principal.getName());
 
-        String url = "https://www.afrikrea.com/fr/categories/clothing";
+        String url = "https://marketplace.anka.africa/en/categories/men-clothing";
         model.addAttribute("user", userDetails);
 
-
         try {
-         //Scraping data from the target URL
+            // Scraping data from the target URL
             scraperService.extractDataFromAnka(responseDTOS, url);
 
-         //Save the scraped data into the database
+            // Save the scraped data into the database
             scraperService.saveData(responseDTOS);
 
-
             // Log the scraped data to the console
-        printScrapedData(responseDTOS);
+            printScrapedData(responseDTOS);
 
-            return new ResponseEntity<>(Map.of("message", "Scraping completed successfully", "status", true), HttpStatus.OK);
+            return new ResponseEntity<>(Map.of("message", "Scraping completed successfully", "status", true),
+                    HttpStatus.OK);
         } catch (Exception e) {
-        e.printStackTrace();
-        return new ResponseEntity<>(Map.of("message", "Error occurred during scraping", "status", false), HttpStatus.OK);
+            e.printStackTrace();
+            return new ResponseEntity<>(Map.of("message", "Error occurred during scraping", "status", false),
+                    HttpStatus.OK);
 
         }
     }

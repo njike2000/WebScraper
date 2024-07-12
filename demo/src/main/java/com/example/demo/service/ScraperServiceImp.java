@@ -11,30 +11,38 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
 @Service
-public class ScraperServiceImp implements ScraperService{
+public class ScraperServiceImp implements ScraperService {
 
     @Value("#{'${website.urls}'.split(',')}")
     private List<String> urls;
 
     @Autowired
-   private ResponseDTORepository responseDTORepository;
+    private ResponseDTORepository responseDTORepository;
 
     @Override
-    public List<ResponseDTO> getProducts(String searchKey)
-    {
+    public List<ResponseDTO> getProducts(String searchKey) {
         if (!Objects.equals(searchKey, "")) {
             return this.responseDTORepository.findByTitleIgnoreCase(searchKey);
         } else {
-            // Si la requête de recherche est vide, retourner tous les produits
+            // If the search request is empty, return all products
             return this.responseDTORepository.findAll();
         }
+    }
+
+    @Override
+    public void scrapeData() {
+        Set<ResponseDTO> responseDTOS = new HashSet<>();
+        for (String url : urls) {
+            extractDataFromAnka(responseDTOS, url);
+        }
+        saveData(responseDTOS);
     }
 
     public void extractDataFromAnka(Set<ResponseDTO> responseDTOS, String url) {
@@ -48,9 +56,9 @@ public class ScraperServiceImp implements ScraperService{
             System.out.println("Content Element Size: " + contentelement.size());
             // getting all the <a> tag elements inside the content div tag
 
-            for(Element contentElement : contentelement) {
+            for (Element contentElement : contentelement) {
 
-                    ResponseDTO responseDTO = new ResponseDTO();
+                ResponseDTO responseDTO = new ResponseDTO();
                 Element nameElement = contentElement.selectFirst(".author .name");
                 if (nameElement != null) {
                     responseDTO.setName(nameElement.text().trim());
@@ -69,11 +77,8 @@ public class ScraperServiceImp implements ScraperService{
                     responseDTO.setPrice(priceElement.text().trim());
                 }
 
-                    if (responseDTO.getUrl() != null)
-                        responseDTOS.add(responseDTO);
-
-
-
+                if (responseDTO.getUrl() != null)
+                    responseDTOS.add(responseDTO);
 
             }
 
@@ -81,7 +86,6 @@ public class ScraperServiceImp implements ScraperService{
             ex.printStackTrace();
         }
     }
-
 
     @Transactional
     @Override
@@ -97,5 +101,3 @@ public class ScraperServiceImp implements ScraperService{
 
     }
 }
-
-
